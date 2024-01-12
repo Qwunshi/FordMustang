@@ -1,0 +1,134 @@
+{% extends "_layout.html" %}
+
+{% block content %}
+<div align="center">
+<img src="/static/gallery/mustang.jpg" title="Логотип" alt="Мустанг" width="200px">
+</div>
+<p class="galler1">Галерея</p>
+<p class="galler2">Эвоюция автомобилей</p>
+<div class="container">
+    <div class="row mb-1">
+        <div class="col-3 gallerjpg"><img src="/static/gallery/car1.jpg" class="img-fluid"></div>
+        <div class="col-3 gallerjpg"><img src="/static/gallery/car2.jpg" class="img-fluid"></div>
+        <div class="col-3 gallerjpg"><img src="/static/gallery/car3.jpg" class="img-fluid"></div>
+        <div class="col-3 gallerjpg"><img src="/static/gallery/car4.jpg" class="img-fluid"></div>
+    </div>
+    <div class="row mb-1">
+        <div class="col-4 gallerjpg"><img src="/static/gallery/car5.jpg" class="img-fluid"></div>
+        <div class="col-4 gallerjpg"><img src="/static/gallery/car6.jpg" class="img-fluid"></div>
+        <div class="col-4 gallerjpg"><img src="/static/gallery/car7.jpg" class="img-fluid"></div>
+    </div>
+</div>
+<div id="image">
+    <div class="container">
+        <div class="row mb-1">
+            <div class="col-3 gallerjpg"><img src="/static/gallery/car8.jpg" class="img-fluid"></div>
+            <div class="col-3 gallerjpg"><img src="/static/gallery/car9.jpg" class="img-fluid"></div>
+            <div class="col-3 gallerjpg"><img src="/static/gallery/car10.jpg" class="img-fluid"></div>
+            <div class="col-3 gallerjpg"><img src="/static/gallery/car11.jpg" class="img-fluid"></div>
+        </div>
+        <div class="row mb-1">
+            <div class="col-4 gallerjpg"><img src="/static/gallery/car12.jpg" class="img-fluid"></div>
+            <div class="col-4 gallerjpg"><img src="/static/gallery/car13.jpg" class="img-fluid"></div>
+            <div class="col-4 gallerjpg"><img src="/static/gallery/car14.jpg" class="img-fluid"></div>
+        </div>
+    </div>
+</div>
+
+
+
+  <button class="butgall" type="button" onclick="show()" id="btnID">
+    Развернуть
+</button>
+<br>
+<br>
+<br>
+<p class="galler2">Интерьеры</p>
+<div class="container">
+    <div class="row mb-1">
+        <div class="col-3 gallerjpg"><img src="/static/gallery/int1.jpg" class="img-fluid"></div>
+        <div class="col-3 gallerjpg"><img src="/static/gallery/int2.jpg" class="img-fluid"></div>
+        <div class="col-3 gallerjpg"><img src="/static/gallery/int3.jpg" class="img-fluid"></div>
+        <div class="col-3 gallerjpg"><img src="/static/gallery/int4.jpg" class="img-fluid"></div>
+    </div>
+    <div class="row mb-1">
+        <div class="col-4 gallerjpg"><img src="/static/gallery/int5.jpg" class="img-fluid"></div>
+        <div class="col-4 gallerjpg"><img src="/static/gallery/int6.jpg" class="img-fluid"></div>
+        <div class="col-4 gallerjpg"><img src="/static/gallery/int7.jpg" class="img-fluid"></div>
+    </div>
+</div>
+<div id="image1">
+    <div class="container">
+        <div class="row mb-1">
+            <div class="col-3 gallerjpg"><img src="/static/gallery/int8.jpg" class="img-fluid"></div>
+            <div class="col-3 gallerjpg"><img src="/static/gallery/int9.jpg" class="img-fluid"></div>
+            <div class="col-3 gallerjpg"><img src="/static/gallery/int10.jpg" class="img-fluid"></div>
+            <div class="col-3 gallerjpg"><img src="/static/gallery/int11.jpg" class="img-fluid"></div>
+        </div>
+        <div class="row mb-1">
+            <div class="col-4 gallerjpg"><img src="/static/gallery/int12.jpg" class="img-fluid"></div>
+        </div>
+    </div>
+</div>
+
+
+
+  <button class="butgall" type="button" onclick="show()" id="btnID1">
+    Развернуть
+</button>
+
+
+<br>
+<br>
+<br>
+<p class="galler2">3D модели</p>
+<div class="block1">
+    <h2 align="center" style="color: white;">Ford Mustang 1965.г</h2>
+</div>
+<div class="model3d">
+<div data-site3d="2848"></div>
+</div>
+<br><br>
+<div class="block1">
+    <h2 align="center" style="color: white;">Ford Mustang Shelbi GT500 2017г.</h2>
+</div>
+<div class="model3d">
+<div data-site3d="2849"></div>
+</div>
+<hr>
+<div class="model-pr"></div>
+
+
+<script id="site3d-configurator-load" src="https://site3d.site/configurator/load.js?time=1703064403944" data-lang="ru"></script>
+
+
+<script>
+const btn = document.getElementById('btnID');
+btn.addEventListener('click', 
+function show() {
+const initialText = 'Развернуть';
+let elem = document.getElementById('image')
+if (btn.textContent.toLowerCase().includes(initialText.toLowerCase())) {
+btn.textContent = 'Свернуть';
+elem.style.display = 'block';
+} else {
+btn.textContent = initialText;
+elem.style.display = 'none';
+}
+});
+
+const btn1 = document.getElementById('btnID1');
+btn1.addEventListener('click', 
+function show() {
+const initialText = 'Развернуть';
+let elem = document.getElementById('image1')
+if (btn1.textContent.toLowerCase().includes(initialText.toLowerCase())) {
+btn1.textContent = 'Свернуть';
+elem.style.display = 'block';
+} else {
+btn1.textContent = initialText;
+elem.style.display = 'none';
+}
+});
+</script>
+{% endblock %}

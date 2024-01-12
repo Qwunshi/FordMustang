@@ -1,0 +1,13 @@
+<div class="block1">
+    <h2 align="center" style="color: white;">ТРЕТЬЕ ПОКОЛЕНИЕ - 1979-1993 ГГ</h2>
+    <img src="/static/model5.jpg" alt="" width="100%">
+</div>
+<hr>
+<div class="textcols">
+    <div class="otst1 textcols-item">
+        
+    </div>
+    <div class="textcols-item">
+       <img src="/static/model6.jpg" alt="" width="100%">
+    </div>
+</div>
